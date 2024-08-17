@@ -1,0 +1,151 @@
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bg-color {
+    /* background-color:var(--secondary-color); */
+    background-color: var(--n-orange);
+}
+
+.light-bg {
+    background-color: var(--light-bg);
+}
+
+.bg-img {
+    background-image: url("https://omtamilcalendar.com/img/asserts/tem_bg.jpg");
+    background-attachment: fixed;
+    position: relative;
+    padding: 43px 0 70px;
+    /* border:2px solid red; */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playbtn-parent {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.fa-play {
+    font-size: xx-large;
+    color: var(--white);
+}
+
+.section-title-1 {
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: 550;
+}
+
+.calender-left,
+.calender-main {
+    height: 500px;
+    /* height: auto; */
+}
+
+@media(min-width:1200px) {
+
+    .calender-left,
+    .calender-main {
+        height: 600px;
+        /* height: auto; */
+
+    }
+}
+
+.calender-right {
+    /* height:auto; */
+}
+
+@media(min-width:768px) {
+    .calender-right {
+        height: 500px;
+        overflow: auto;
+    }
+}
+
+.calender-left,
+.calender-right {
+    box-shadow: 5px 0 18px -3px rgba(0, 0, 0, 0.15);
+}
+
+.calender-main {
+    box-shadow: 5px 0 18px -3px rgba(0, 0, 0, 0.15);
+}
+
+#calender-parent {
+    /* position: relative; */
+    background-color: #fbfbfb;
+    color: #5a5a5a;
+    /* width: 100%; */
+    -webkit-box-shadow: 0 10px 50px -20px #8773c1;
+    box-shadow: 0 10px 50px -20px #8773c1;
+    /* margin: 0 auto; */
+    /* overflow: hidden; */
+    /* z-index: 1; */
+}
+
+.calendar-sidebar {
+    background-color: var(--n-orange);
+    color: var(--white);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #475071;
+    border: 3px solid #eef3f7;
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #eef3f7;
+}
+
+.month {
+    list-style: none;
+    font-size: large;
+    font-weight: bold;
+}
+
+.month:hover,
+.month:focus {
+    color: black;
+    /* border-bottom: 4px solid black;
+    border-radius: 2px; */
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+
+/* @media(max-width:992px) {
+    .calendar-year {
+        padding-left: 40px;
+    }
+} */
+
+/* .btn */
+
+
+.btn:disabled{
+    border-color: transparent;
+}

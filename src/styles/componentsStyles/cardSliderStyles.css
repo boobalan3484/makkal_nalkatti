@@ -1,0 +1,68 @@
+.card-slider-container {
+    width: 100%;
+    padding: 0 15px; /* Padding around the container */
+    /* overflow: hidden; Hide anything that overflows the container */
+}
+
+.card-slider-body {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.slider-card {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin: 0 auto; /* Center the card */
+}
+
+.slider-card:hover {
+    box-shadow: rgba(210, 208, 208, 0.16) 0px 3px 6px, rgba(197, 192, 192, 0.23) 0px 3px 6px;
+}
+
+.card-slider-order-btn {
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.card-slider-order-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.slick-next:before, .slick-prev:before {
+    color: var(--secondary-color) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .slick-slide {
+        padding: 0 10px; /* Padding between slides */
+    }
+}
+
+@media (max-width: 992px) {
+    .slider-card {
+        width: 100%; /* Ensure cards are full width on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-slider-container {
+        padding: 0 10px; /* Less padding for small screens */
+    }
+
+    .slick-slide {
+        padding: 0 5px; /* Even less padding for small screens */
+    }
+}
+
+@media(max-width:576px){
+    .slick-next{
+        right:-10px !important;
+    }
+    .slick-prev{
+        left:-10px !important;
+        z-index:10 !important;
+    }
+}

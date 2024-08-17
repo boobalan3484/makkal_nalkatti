@@ -1,0 +1,58 @@
+.form-control-lg {
+    appearance: auto; /* Reset appearance */
+    -webkit-appearance: auto; /* For Safari/Chrome */
+    border-radius: initial;
+    border-width: initial;
+    padding: initial;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    box-shadow: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    /* Add more as needed */
+  }
+  
+  .react-tabs__tab-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content:start; /* Adjusted to flex-start */
+    align-items: center;
+    /* flex-wrap: wrap; */
+    overflow-x: auto;
+    gap: 20px;
+  }
+  
+  .react-tabs__tab-list li {
+    border:none;
+    border-bottom:3px solid var(--secondary-color);
+    padding: 10px; /* Add padding for spacing */
+  }
+  
+  .react-tabs__tab {
+    border:none;
+    cursor: pointer; /* Add cursor pointer for better UX */
+    padding: 10px 20px; /* Adjust padding as needed */
+  }
+  
+  .react-tabs__tab--selected {
+    border:none;
+    font-weight: bold;
+    color: var(--primary-color); 
+  }
+  .react-tabs__tab:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  .para-1{
+    margin-top: 10px;
+    font-weight: 700;
+    line-height: 26px;
+    color:rgb(78, 78, 78);
+    word-break: break-all;
+  }
+
+.option-1-img{
+ max-width:350px;
+ max-height:350px;
+}

@@ -1,0 +1,40 @@
+export const twelveRasi =[
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/1.png",
+    },
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/2.png",
+    },
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/3.png",
+    },
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/4.png",
+    },
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/5.png"
+    },
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/6.png"
+    },
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/7.png"
+    },
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/8.png"
+    },
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/9.png"
+    },
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/10.png"
+    },
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/11.png"
+    },
+    {
+        img:"https://www.omtamilcalendar.com/auspicious_icons/12.png"
+    }
+]
+
+export const rasiOne = { img:"https://www.omtamilcalendar.com/auspicious_icons/12.png" }

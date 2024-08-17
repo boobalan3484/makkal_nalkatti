@@ -1,0 +1,23 @@
+.section-title {
+    position: relative;
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: 550;
+    text-align: center; /* Center align the text */
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0px; /* Adjust this value to position the underline */
+    left: 50%; /* Center the underline */
+    transform: translateX(-50%); /* Adjust to center based on width of ::after element */
+    width: 60px; /* Width of the underline */
+    height: 1px; /* Height/thickness of the underline */
+    background-color: var(--secondary-color); /* Color of the underline */
+  }
+ .bg-orange{
+  background-color:var(--secondary-color);
+ }
+  

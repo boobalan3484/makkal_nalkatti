@@ -1,0 +1,35 @@
+.form-group{
+    border-radius:20px;
+}
+.subscription-form-container{
+    border:1px solid rgb(90, 89, 89);
+    border-radius:30px;
+    overflow:hidden;
+    display: flex;
+    justify-content:start;
+    align-items:center;
+    gap:0px;
+    width:60%;
+}
+.subscription-form-container input[type="email"] {
+    border: none;
+    outline: none;
+}
+
+.subscription-form-container input[type="email"]:focus {
+    outline: none;
+    box-shadow: none; /* Add this to ensure no shadow appears on focus */
+}
+.subscribe-btn{
+    background-color:var(--secondary-color);
+    color:var(--white);
+    font-weight:bold;
+    border-radius:30px;
+}
+.subscribe-btn:hover{
+    background-color:var(--white);
+    color:var(--secondary-color);
+    border:1px solid var(--secondary-color);
+    font-weight:bold;
+    border-radius:30px;
+}

@@ -1,0 +1,56 @@
+.rasi-image-parent {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 2px solid var(--secondary-color);
+    cursor:pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+.single-rasi-parent {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border: 2px solid var(--secondary-color);
+    cursor:pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .single-rasi-parent img, .rasi-image-parent img {
+    display: block;
+    width: 90%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .single-rasi-parent::before, .rasi-image-parent::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid red;
+    border-radius: 50%; 
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .single-rasi-parent:hover img, .rasi-image-parent:hover img{
+    transform: scale(1.1); /* Zoom in effect on hover */
+  }
+  
+  .single-rasi-parent:hover::before, .rasi-image-parent:hover::before {
+    opacity: 1; /* Show border overlay on hover */
+  }
+ 
