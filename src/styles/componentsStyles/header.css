@@ -1,28 +1,37 @@
-.navbar-brand{
-    width:60px;
-    height:60px;
+.navbar-brand {
+    width: 60px;
+    height: 60px;
 }
-.logo-img{
-    width:100%;
-    height:100%;
+
+.logo-img {
+    width: 100%;
+    height: 100%;
 }
-.nav-link{
-    color:var(--white);
-    font-weight:600;
+
+.nav-link {
+    color: var(--white);
+    font-weight: 600;
     font-size: medium;
 }
-.nav-link:hover{
-    color:var(--black); 
+
+.nav-link:hover {
+    color: var(--black);
 }
 
 .offcanvas-start {
-    background-color:var(--n-orange-mono);
+    background-color: var(--n-orange1);
 }
-.navbar{
-    background-color:var(--n-orange);
-}
+
+/* .navbar {
+    background-color: var(--n-orange1);
+} */
 
 .custom-focus:focus {
     outline: none;
     box-shadow: none;
-  }
+}
+/* 
+.navbar-style{
+    background: transparent;
+    filter: blur();
+} */

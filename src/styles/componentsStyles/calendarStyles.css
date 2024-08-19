@@ -187,7 +187,7 @@
 
 
 .calendar-container {
-    width: 80%;
+    width: 90%;
     /* height: 80%; */
     margin: 0 auto;
     padding: 20px;
@@ -215,13 +215,28 @@
     }
 }
 
-.cal-overview-parent {
+/* .cal-overview-parent {
     height: 500px;
     overflow: auto;
-}
+} */
+
+.hide-scrollbar {
+    overflow: auto;  /* Allows scrolling */
+    height: 500px;   /* Set a height for overflow */
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Hides scrollbar for WebKit browsers */
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* Hides scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hides scrollbar for Firefox */
+  }
+
 
 @media(max-width:991px) {
-    .cal-overview-parent {
+    .hide-scrollbar {
         height: 100%;
         overflow: hidden;
     }

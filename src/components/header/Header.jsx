@@ -5,7 +5,7 @@ import '@/styles/componentsStyles/header.css'
 function Header() {
     return (
         <>
-            <nav className="navbar sticky-top navbar-expand-md " id='navbar-parent'>
+            <nav className="navbar sticky-top navbar-expand-md bg-main-orange" id='navbar-parent'>
                 <div className="container-lg header ">
 
                     <a className="navbar-brand" href="#">

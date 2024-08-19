@@ -5,7 +5,7 @@ import { todayRasi, tamilMonthNames } from '@/datas/calender';
 
 const TodayRasipalan = ({passData}) => {
   return (
-    <div>
+    <div className='p-2'>
       <div className="row">
         <Heading02 title={"இன்றைய ராசிபலன்"} />
       </div>

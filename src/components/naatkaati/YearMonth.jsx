@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '@/styles/componentsStyles/calendarStyles.css';
 import { tamilMonthNames } from '@/datas/calender/';
-import MonthsList from './MonthsList';
-import MonthCarousel from './MonthCarousel';
 
 import Slider from "react-slick";
 
@@ -94,10 +92,8 @@ const YearMonth = ({ getMonth, changeYear }) => {
 
     }
 
-    // const firstSixMonths = tamilMonthNames.slice(0, 6);
-    // const remainingMonths = tamilMonthNames.slice(6);
-
-    var settings = {
+    // month slick-slider custom setting
+    const settings = {
         dots: false,
         infinite: false,
         slidesToShow: 6,
@@ -134,8 +130,8 @@ const YearMonth = ({ getMonth, changeYear }) => {
 
     return (
         <div className="container">
-            <div className='container-fluid d-flex justify-content-between align-items-center'>
-                <div className='calendar-year w-100 d-flex justify-content-center pt-2'>
+            {/* <div className='container-fluid d-flex justify-content-between align-items-center'> */}
+                <div className='calendar-year w-100 d-flex justify-content-center pt-2 border-bottom'>
                     <div className='d-flex align-items-center mt-2'>
                         <button className="btn icon-button allmonth-leftarrow" role="button" data-year-val="prev" title="Previous year"
                             onClick={() => handleYearChange('prev')}
@@ -157,15 +153,7 @@ const YearMonth = ({ getMonth, changeYear }) => {
                         <span className="navbar-toggler-icon text-light"></span>
                     </button>
                 </p> */}
-            </div>
-
-            {/* <MonthCarousel
-                firstSixMonths={firstSixMonths}
-                remainingMonths={remainingMonths}
-                // months={months}
-                // index={index}
-                getMonthValue={getMonthValue}
-            /> */}
+            {/* </div> */}
 
             {/* <ul className="text-white">
                         <div className='row'>
@@ -191,7 +179,7 @@ const YearMonth = ({ getMonth, changeYear }) => {
                             ))}
                         </div>
                     </ul> */}
-            <div className="container month-slider py-3">
+            <div className="container month-slider py-2">
                 <Slider {...settings}>
                     {tamilMonthNames.map((month, idx) => (
                         <div className='text-center text-white'
@@ -245,11 +233,8 @@ const YearMonth = ({ getMonth, changeYear }) => {
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
                 </button>
-            </div> */}
-
-
-
-            {/* <div className='container-fluid parent' style={{ height: '200px', background: '#cecece' }}>
+            </div> 
+             <div className='container-fluid parent' style={{ height: '200px', background: '#cecece' }}>
                 <div className='container inner row  h-100' >
                     <div className='container item' style={{height:'100%', width:'100%', background:'#fefefe'}} >
 
@@ -265,12 +250,8 @@ const YearMonth = ({ getMonth, changeYear }) => {
                     Next
                 </button>
 
-            </div> */}
-
-
-
-
-            {/* <div className="d-block  text-center text-white  d-lg-none" >
+            </div> 
+            <div className="d-block  text-center text-white  d-lg-none" >
                 <div className="pb-2 collapse" id="collapseExample">
                     <ul className="text-center text-white pe-5">
                         {tamilMonthNames.map((months, index) => (

@@ -22,11 +22,17 @@
   --new-skyBlue: #18A1DB;
   --new-violet: #60439A;
 
-  --n-yellow:#EDC612;
-  --n-yellow-mono:#F1D241;
+  --n-orange1:#FE9000; /* Princeton Orange */
+  --n-orange2:#F9A620;  /* orange(web) */
+  --n-orange3:#F58F29;  /* Dark-orange(Web) */
+  --n-orange4:#FAA916;  /* orange(Web) */
+  --n-orange5:#FFB238;  /* orange(Web) */
+  --n-orange6:#FABC3C;  /* Xanthous*/
+  
+  
 
-  --n-orange:#D47B2B;
-  --n-orange-mono:#DC9656;
+
+
 }
 
 
@@ -43,4 +49,12 @@ html,
 body {
   max-width: 100vw;
   /* overflow-x: hidden; */
+}
+
+.bg-main-orange {
+  background-color: var(--n-orange1);
+}
+
+.color-main-orange{
+  color: var(--n-orange1) ;
 }

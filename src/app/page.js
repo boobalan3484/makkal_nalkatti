@@ -127,7 +127,7 @@ function page() {
     <>
       <Header />
 
-      <section className="container-fluid bg-color h-75">
+      <section className="container-fluid bg-main-orange h-75">
         <Banner />
       </section>
 
@@ -135,7 +135,7 @@ function page() {
 
         <Heading title={'நாட்காட்டி'} />
 
-        <div className="container-fluid d-block mb-5 bg-color">
+        <div className="container-fluid d-block mb-4 bg-main-orange">
           <div className="row ">
             {clickedDate !== undefined ? <YearMonth getMonth={clickedDate} changeYear={originalYear} /> :
               <p>Data Loading...</p>}
@@ -144,14 +144,17 @@ function page() {
 
         <div className='container'>
           <div className='row gap-4'>
-            <div className='col-lg h-auto'>
-              <MainCalender sendDataToParent={getUseClickedData} yearChange={clickedDate} />
-            </div>
-            <div className='col-lg-3 cal-overview-parent'>
+            <div className='d-none d-lg-block col-lg-3 hide-scrollbar shadow-lg rounded'>
               <CalenderOverview passData={rasiDaily} clickedDate={clickedDate} getChangedDate={changedDateFun} time={calendarDaily} vasthunaal={panchangam} />
             </div>
-            <div className='col-lg-3 cal-overview-parent'>
-              <TodayRasipalan passData={rasiDaily}  />
+            <div className='col-lg h-auto shadow-lg rounded'>
+              <MainCalender sendDataToParent={getUseClickedData} yearChange={clickedDate} />
+            </div>
+            <div className='col d-lg-none  hide-scrollbar shadow-lg rounded'>
+              <CalenderOverview passData={rasiDaily} clickedDate={clickedDate} getChangedDate={changedDateFun} time={calendarDaily} vasthunaal={panchangam} />
+            </div>
+            <div className='col-lg-3 hide-scrollbar shadow-lg rounded'>
+              <TodayRasipalan passData={rasiDaily} />
             </div>
           </div>
         </div>
