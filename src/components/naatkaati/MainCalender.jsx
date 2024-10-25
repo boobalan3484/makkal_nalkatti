@@ -4,6 +4,8 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import '@/styles/componentsStyles/calendarStyles.css';
 import { tamilWeekNames, tamilMonthNames } from '@/datas/calender';
+import tamilLocale from './tamilLocale' // Import the Tamil locale
+
 
 // Utility functions
 const getTamilWeekName = (date) => {
@@ -178,7 +180,7 @@ const MainCalender = ({ sendDataToParent, yearChange }) => {
 
 
   return (
-    <div className="calendar-container ">
+    <div className="calendar-container hide-scrollbar ">
 
       <FullCalendar
         ref={calendarRef}
@@ -189,6 +191,7 @@ const MainCalender = ({ sendDataToParent, yearChange }) => {
         eventClick={handleEventClick}
         datesSet={handleDatesSet}
         className='calendar-component'
+        locale='ta' // Set locale to Tamil
       />
     </div>
   )

@@ -16,34 +16,49 @@
   --light-bg: #f6f6f6;
   --gray: gray;
   --light-black: rgb(42, 42, 42);
-  
+
   --new-yellow: #FAAB1E;
   --new-pink: #B04398;
   --new-skyBlue: #18A1DB;
   --new-violet: #60439A;
 
-  --n-orange1:#FE9000; /* Princeton Orange */
-  --n-orange2:#F9A620;  /* orange(web) */
-  --n-orange3:#F58F29;  /* Dark-orange(Web) */
-  --n-orange4:#FAA916;  /* orange(Web) */
-  --n-orange5:#FFB238;  /* orange(Web) */
-  --n-orange6:#FABC3C;  /* Xanthous*/
-  
-  
+  /* --n-orange1: #FE9000; */
+  /* Princeton Orange */
+  --n-orange2: #F9A620;
+  /* orange(web) */
+  --n-orange3: #F58F29;
+  /* Dark-orange(Web) */
+  --n-orange4: #FAA916;
+  /* orange(Web) */
+  --n-orange5: #FFB238;
+  /* orange(Web) */
+  --n-orange6: #FABC3C;
+  /* Xanthous*/
+
+  --n-orange1: #FAAB1E;
+
+  /* web app focused on astrology, zodiac, or calendars, the color palette */
+
+  --gpt-midnight-blue: #003366;
+  --gpt-deep-purple: #4B0082;
+  --gpt-lavender: #E6E6FA;
+  --gpt-emerald-green: #50C878;
+  --gpt-gold: #FFD700;
+  --gpt-silver: #C0C0C0;
+  --gpt-charcoal: #333333;
+  --gpt-ivory: #FFFFF0;
+  --gpt-coral: #FF7F50;
+  --gpt-teal: #008080;
 
 
 
 }
-
-
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
-
 
 html,
 body {
@@ -55,6 +70,25 @@ body {
   background-color: var(--n-orange1);
 }
 
-.color-main-orange{
-  color: var(--n-orange1) ;
+.color-main-orange {
+  color: var(--n-orange1);
+}
+
+.bg-yearmonth{
+background-image: linear-gradient(to bottom, #FF7F50, #FAAB1E)
+}
+
+.bg-subhead {
+  background-image: linear-gradient(to right, #b24e4e, #A55393);
+}
+
+.bg-date{
+  background-image: linear-gradient(45deg, #7C9FC2, #188F8F);
+}
+
+.color-tmonth{
+  color: #188F8F;
+}
+.color-tyear{
+  color: #7C9FC2;
 }

@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import '@/styles/componentsStyles/header.css'
 
+// import logo from '../../assets/logo.png'
+
+
 function Header() {
     return (
         <>
@@ -10,6 +13,7 @@ function Header() {
 
                     <a className="navbar-brand" href="#">
                         <img src='https://www.omtamilcalendar.com/auspicious_icons/omtamilcalendar_logo-2024.png' className='img-fluid logo-img' alt='logo' />
+                        {/* <img src={} className='img-fluid logo-img' alt='logo' /> */}
                     </a>
 
                     <button className="navbar-toggler border-0 custom-focus" type="button" data-bs-theme="dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft" aria-label="Toggle navigation">
@@ -38,13 +42,13 @@ function Header() {
                                             <li className="nav-item">
                                                 <Link className="nav-link" aria-current="page" href=''>முகப்பு</Link>
                                             </li>
-                                            <li className="nav-item">
+                                            {/* <li className="nav-item">
                                                 <Link className="nav-link" aria-current="page" href=''>ராசிபலன்</Link>
+                                            </li> */}
+                                            <li className="nav-item">
+                                                <Link className="nav-link" aria-current="page" href='#naatkaati'>நாட்கட்டி</Link>
                                             </li>
                                             {/* <li className="nav-item">
-                                                <Link className="nav-link" aria-current="page" href=''>நாட்கட்டி</Link>
-                                            </li>
-                                            <li className="nav-item">
                                                 <Link className="nav-link" aria-current="page" href=''>ஓம் ஆஸ்ட்ரோ</Link>
                                             </li>
                                             <li className="nav-item">
@@ -52,7 +56,7 @@ function Header() {
                                             </li>
                                             <li className="nav-item">
                                                 <Link className="nav-link" aria-current="page" href=''>கதைகள்</Link>
-                                            </li> */}
+                                            </li>  */}
                                         </ul>
                                     </div>
                                 </div>

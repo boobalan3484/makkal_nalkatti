@@ -129,7 +129,7 @@
 /* dayover view start */
 
 .day-overview-row {
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color); */
 }
 
 .day-overview-leftarrow,
@@ -137,23 +137,19 @@
     color: var(--white);
 }
 
-.day-number {
+/* .day-number {
     background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .day-number h2 {
     color: var(--white);
     margin: 0px;
 }
 
-.day-title-1 {
-    font-weight: 600;
-    text-align: center;
-    color: var(--secondary-color);
-}
+
 
 .day-up-arrow,
 .moon-img {
@@ -162,7 +158,7 @@
 }
 
 .bottom-primary-line {
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--n-orange1);
 }
 
 .bottom-line {
@@ -215,24 +211,40 @@
     }
 }
 
-/* .cal-overview-parent {
-    height: 500px;
-    overflow: auto;
-} */
-
 .hide-scrollbar {
-    overflow: auto;  /* Allows scrolling */
-    height: 500px;   /* Set a height for overflow */
-  }
+    overflow: auto;
+    /* Allows scrolling */
+    height: 500px;
+    /* Set a height for overflow */
+    -ms-overflow-style: auto;
+    /* Hides scrollbar for IE and Edge */
+    scrollbar-width: 8px;
+    /* Hides scrollbar for Firefox */
+}
 
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;  /* Hides scrollbar for WebKit browsers */
-  }
+.hide-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    /* display: none; */
+    /* Hides scrollbar for WebKit browsers */
+}
 
-  .hide-scrollbar {
-    -ms-overflow-style: none;  /* Hides scrollbar for IE and Edge */
-    scrollbar-width: none;  /* Hides scrollbar for Firefox */
-  }
+.hide-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #c9ced1;
+    border: 3px solid #ffffff;
+    border-radius: 7px;
+
+}
+
+.hide-scrollbar::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+/* .hide-scrollbar { */
+/* -ms-overflow-style: none; */
+/* Hides scrollbar for IE and Edge */
+/* scrollbar-width: none; */
+/* Hides scrollbar for Firefox */
+/* } */
 
 
 @media(max-width:991px) {
@@ -241,8 +253,6 @@
         overflow: hidden;
     }
 }
-
-
 
 .calendar-component {
     width: 100%;
@@ -331,7 +341,8 @@
 
 .fc .fc-button-primary,
 .fc .fc-button-primary {
-    background-color: var(--secondary-color) !important;
+  background-image: linear-gradient(45deg, #7C9FC2, #188F8F) !important;
+    /* background-color: var(--n-orange1) !important; */
     border: none !important;
 }
 
@@ -351,16 +362,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
 }
 
-/* .fc .fc-button-primary:hover{
-    border:1px solid var(--secondary-color) !important;
-    background-color:var(--white) !important;
+.fc .fc-button-primary:hover {
+    /* border:1px solid var(--secondary-color) !important; */
+    background-image: linear-gradient(45deg, #8da3a3, #9cacbc) !important;
+}
 
-} */
 .fc .fc-button-primary:hover .fc-icon-chevron-right {
     color: var(--black) !important;
+    outline: none;
 }
 
 .fc-prev-button:hover .fc-icon-chevron-left {
@@ -369,7 +381,7 @@
 }
 
 .fc-toolbar-title {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 @media(min-width:1400px) {
@@ -381,17 +393,32 @@
 
 .fc-day {
     cursor: pointer;
+    font-size: 10px;
 }
 
+.fc-col-header-cell {
+    cursor: pointer;
+    font-size: 8px;
+}
+
+
+@media(min-width:540px) {
+    .fc-day {
+        font-size: 16px;
+
+    }
+
+    .fc-col-header-cell {
+        font-size: 10px;
+    }
+}
+
+@media(min-width:1024px) {
+    .fc-col-header-cell {
+        font-size: 12px;
+    }
+}
 
 /* .fc-scrollgrid{
     margin-bottom:20px !important;
 } */
-
-.bars {
-    height: 4px;
-    width: 20px;
-    border-radius: 5px;
-    background-color: white;
-    margin: 0 0 5px 0px;
-}

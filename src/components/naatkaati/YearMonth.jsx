@@ -8,6 +8,9 @@ import Slider from "react-slick";
 const YearMonth = ({ getMonth, changeYear }) => {
     const [currMonth, setCurrMonth] = useState(''); //january
     const [newMonth, setNewMonth] = useState(getMonth || {});
+
+    const [initialSlide, setInitialSlide] = useState(1); // index for initial slide
+
     // const [monthNum, setMonthNum] = useState(undefined);
 
     // Update `currMonth` and `newMonth` when `getMonth` changes
@@ -16,12 +19,13 @@ const YearMonth = ({ getMonth, changeYear }) => {
             const filterMonth = tamilMonthNames.find(month => month === getMonth.tMonth);
             setCurrMonth(filterMonth || '');
             setNewMonth(getMonth); // Update newMonth with the latest prop value
+            
         }
     }, [getMonth]);
 
     // Update the active month class
     useEffect(() => {
-        const monthItems = document.querySelectorAll('.calendar-months li');
+        const monthItems = document.querySelectorAll('.calendar-months div');
         monthItems.forEach(item => {
             if (item.innerText === currMonth) {
                 item.classList.add('active-month');
@@ -89,8 +93,9 @@ const YearMonth = ({ getMonth, changeYear }) => {
             setNewMonth(update);
             changeYear(update);
         }
-
     }
+
+
 
     // month slick-slider custom setting
     const settings = {
@@ -98,8 +103,8 @@ const YearMonth = ({ getMonth, changeYear }) => {
         infinite: false,
         slidesToShow: 6,
         slidesToScroll: 6,
-        initialSlide: 0,
         speed: 500,
+        initialSlide: initialSlide,
         responsive: [
             {
                 breakpoint: 1024,
@@ -129,142 +134,42 @@ const YearMonth = ({ getMonth, changeYear }) => {
     }
 
     return (
-        <div className="container">
+        <div className="container bg-yearmonth">
             {/* <div className='container-fluid d-flex justify-content-between align-items-center'> */}
-                <div className='calendar-year w-100 d-flex justify-content-center pt-2 border-bottom'>
-                    <div className='d-flex align-items-center mt-2'>
-                        <button className="btn icon-button allmonth-leftarrow" role="button" data-year-val="prev" title="Previous year"
-                            onClick={() => handleYearChange('prev')}
-                            disabled
-                        >
-                            <i className="fa-solid fa-less-than fs-4 mb-2"></i>
-                        </button>
-                        <h4 className='year-number '>{newMonth.year}</h4>
-                        <button className="btn icon-button allmonth-rightarrow" role="button" data-year-val="next" title="Next year"
-                            onClick={() => handleYearChange('next')}
-                            disabled
-                        >
-                            <i className="fa-solid fa-greater-than fs-4 mb-2"></i>
-                        </button>
-                    </div>
-                </div>
-                {/* <p className="d-lg-none gap-1">
-                    <button className="navbar-toggler" type="button" data-bs-theme="dark" data-bs-toggle="collapse" bg='dark' data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        <span className="navbar-toggler-icon text-light"></span>
+            <div className='calendar-year w-100 d-flex justify-content-center pt-2 border-bottom'>
+                <div className='d-flex align-items-center mt-2'>
+                    <button className="btn icon-button allmonth-leftarrow" role="button" data-year-val="prev" title="Previous year"
+                        onClick={() => handleYearChange('prev')}
+                        disabled
+                    >
+                        <i className="fa-solid fa-less-than fs-4 mb-2"></i>
                     </button>
-                </p> */}
-            {/* </div> */}
-
-            {/* <ul className="text-white">
-                        <div className='row'>
-                            {firstSixMonths.map((months, index) => (
-                                <div className="col my-3 d-flex justify-content-center" key={index}>
-                                    <MonthsList months={months}
-                                        index={index}
-                                        getMonthValue={getMonthValue}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </ul>
-                    <ul className="text-white ">
-                        <div className='row'>
-                            {remainingMonths.map((months, index) => (
-                                <div className="col my-3 d-flex justify-content-center" key={index}>
-                                    <MonthsList months={months}
-                                        index={index}
-                                        getMonthValue={getMonthValue}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </ul> */}
-            <div className="container month-slider py-2">
+                    <h4 className='year-number '>{newMonth.year}</h4>
+                    <button className="btn icon-button allmonth-rightarrow" role="button" data-year-val="next" title="Next year"
+                        onClick={() => handleYearChange('next')}
+                        disabled
+                    >
+                        <i className="fa-solid fa-greater-than fs-4 mb-2"></i>
+                    </button>
+                </div>
+            </div>
+            {/* Comment 1 */}
+            <div className="container month-slider calendar-months py-2">
                 <Slider {...settings}>
                     {tamilMonthNames.map((month, idx) => (
-                        <div className='text-center text-white'
+                        <div className='text-center text-white month'
                             key={idx}
                             role='button'
                             data-month-val={idx + 1}
                             onClick={getMonthValue}
                         >
-                            <p>{month}</p>
+                            <p className='fw-bold'>{month}</p>
                         </div>
                     ))}
                 </Slider>
             </div>
 
-            {/* <div id="carouselMonth" className="carousel slide container d-none d-lg-block" >
-                <div className="carousel-inner w-75 mx-auto">
-                    <div className="carousel-item active">
-                        <ul className="text-white">
-                            <div className='row'>
-                                {firstSixMonths.map((months, index) => (
-                                    <div className="col my-3 d-flex justify-content-center" key={index}>
-                                        <MonthsList months={months}
-                                            index={index}
-                                            getMonthValue={getMonthValue}
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-                        </ul>
-                    </div>
-                    <div className="carousel-item container-sm">
-                        <ul className="text-white ">
-                            <div className='row'>
-                                {remainingMonths.map((months, index) => (
-                                    <div className="col my-3 d-flex justify-content-center" key={index}>
-                                        <MonthsList months={months}
-                                            index={index}
-                                            getMonthValue={getMonthValue}
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselMonth" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselMonth" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            </div> 
-             <div className='container-fluid parent' style={{ height: '200px', background: '#cecece' }}>
-                <div className='container inner row  h-100' >
-                    <div className='container item' style={{height:'100%', width:'100%', background:'#fefefe'}} >
-
-                    </div>
-                    <div className='container item' style={{height:'100%', width:'100%', background:'#00000'}} >
-
-                    </div>
-                </div>
-                <button type='button'>
-                    Prev
-                </button>
-                <button type='button'>
-                    Next
-                </button>
-
-            </div> 
-            <div className="d-block  text-center text-white  d-lg-none" >
-                <div className="pb-2 collapse" id="collapseExample">
-                    <ul className="text-center text-white pe-5">
-                        {tamilMonthNames.map((months, index) => (
-                            <MonthsList
-                                key={index}
-                                months={months}
-                                index={index}
-                                getMonthValue={getMonthValue}
-                            />
-                        ))}
-                    </ul>
-                </div>
-            </div> */}
+            {/* Comment 2 */}
         </div>
     )
 }

@@ -40,6 +40,7 @@ import YearMonth from '@/components/naatkaati/YearMonth'
 import MainCalender from '@/components/naatkaati/MainCalender';
 import CalenderOverview from '@/components/naatkaati/CalenderOverview';
 import TodayRasipalan from '@/components/naatkaati/TodayRasipalan';
+import CalendarWorkout from '@/components/naatkaati/CalendarWorkout';
 
 function page() {
   let [rasiDaily, setRasiDaily] = useState();
@@ -127,11 +128,11 @@ function page() {
     <>
       <Header />
 
-      <section className="container-fluid bg-main-orange h-75">
+      {/* <section className="container-fluid bg-main-orange h-75">
         <Banner />
-      </section>
+      </section> */}
 
-      <section className='mt-3'>
+      <section className='mt-3' id='naatkaati'>
 
         <Heading title={'நாட்காட்டி'} />
 
@@ -158,17 +159,9 @@ function page() {
             </div>
           </div>
         </div>
-
-
       </section>
 
-
-
-
-
-
-
-
+      {/* <CalendarWorkout /> */}
 
       <section className="container-fluid py-3">
         <Heading title={'ஆன்மிக ஸ்டோரீஸ்'} />

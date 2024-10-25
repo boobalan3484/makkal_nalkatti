@@ -177,9 +177,9 @@ function CalenderOverview({ passData, time, vasthunaal, clickedDate, getChangedD
 
 
     return (
-        <div className="container-fluid day-overview-names p-2">
+        <div className="container-fluid day-overview-names p-2 ">
             {/* <div className="container"> */}
-                <div className="row day-overview-row py-3 rounded">
+                <div className="row day-overview-row py-3 rounded bg-yearmonth">
                     <div onClick={() => changeDate('prev')} className="col-2 day-overview-leftarrow d-flex justify-content-center align-items-center my-auto">
                         <i className="fa-solid fa-less-than fs-3"></i>
                     </div>
@@ -192,13 +192,13 @@ function CalenderOverview({ passData, time, vasthunaal, clickedDate, getChangedD
                     </div>
                 </div>
 
-                <div className="row py-2 bottom-primary-line align-items-center">
+                <div className="row py-2 bottom-primary-line align-items-center ">
                     <div className="col">
-                        <p className="day-title-1 m-0">{time && time[0].tyear}</p>
-                        <p className="day-title-1">{time && time[0].tmonth}</p>
+                        <p className="m-0 fw-bold text-center color-tyear">{time && time[0].tyear}</p>
+                        <p className="m-0 fw-bold text-center color-tmonth">{time && time[0].tmonth}</p>
                     </div>
                     <div className="col">
-                        <div className="day-number rounded">
+                        <div className="d-flex justify-content-center align-items-center bg-date rounded">
                             <p className='text-center fw-bolder py-2 text-white fs-6'>{time && time[0].tdate}</p>
                         </div>
                     </div>
